@@ -9,7 +9,7 @@ The application is built with **Python Flask** for the backend and **React** for
 ## Features ✨
 
 - Analyze foot injuries using OAR guidelines  
--classify the injuries as red for critical,green for safe and yellow for minor
+- classify the injuries as red for critical,green for safe and yellow for minor
 - Responsive and user-friendly interface  
 - Fast and secure backend using Flask  
 - Interactive frontend with React
@@ -52,4 +52,5 @@ npm install
 ```bash
 git clone https://github.com/yourusername/CuraMind.git
 cd CuraMind
+
 
