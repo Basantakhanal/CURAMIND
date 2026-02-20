@@ -30,15 +30,19 @@ The application is built with **Python Flask** for the backend and **React** for
 for backend
 
 cd backend
+
 python -m venv venv
+
 # Activate virtual environment
-# Windows
+
 venv\Scripts\activate
+
 pip install -r requirements.txt
 
 for frontend
 
 cd ../frontend
+
 npm install
 
 
@@ -48,3 +52,4 @@ npm install
 ```bash
 git clone https://github.com/yourusername/CuraMind.git
 cd CuraMind
+
