@@ -1,51 +1,55 @@
-🩺 CuraMind
+# 🩺 CuraMind
 
-AI-Powered Foot Injury Assessment & Care Guidance
+CuraMind is a health-focused web application designed to help users assess foot and ankle injuries based on the **Ottawa Ankle Rules (OAR)**. It provides an interactive chatbot interface where users can submit information about their injury and receive guidance for appropriate care.
 
-CuraMind is a health-based web application designed to help users identify foot injuries based on the Ottawa Ankle Rules (OAR). It provides a simple and interactive interface where users can submit their injury-related responses through a chatbot and receive guidance for proper care.
+The application analyzes user responses and classifies injuries into three categories: **Red for Critical, Yellow for Minor, and Green for Safe**. CuraMind also provides care guidance and enables users to communicate with a doctor when professional medical assistance is required.
 
-The application classifies injuries into three categories:
+---
 
-🔴 Red: Critical
-🟡 Yellow: Minor
-🟢 Green: Safe
+## ✨ Features
 
-CuraMind is built using Python Flask for the backend and React for the frontend.
+- 🩺 Foot and Ankle Injury Assessment
+- 🤖 Interactive Injury Assessment Chatbot
+- 🔎 Ottawa Ankle Rules (OAR) Based Analysis
+- 🚦 Three-Level Injury Classification
+  - 🔴 Red — Critical
+  - 🟡 Yellow — Minor
+  - 🟢 Green — Safe
+- 💡 Appropriate Care Guidance
+- 👨‍⚕️ Real-Time Communication with Doctor
+- 📋 User Response Collection and Analysis
+- 📱 Responsive and User-Friendly Interface
+- ⚡ Fast Flask Backend
+- 💻 Interactive React Web Interface
+- 🗄️ SQLite / PostgreSQL Database Support
+- 🔐 Secure Frontend and Backend Communication
 
-✨ Features
-🩺 Analyze foot injuries using OAR guidelines
-🤖 Interactive chatbot for injury assessment
-🚦 Classify injuries into three categories
-🔴 Red — Critical
-🟡 Yellow — Minor
-🟢 Green — Safe
-💡 Provide appropriate care guidance
-👨‍⚕️ Real-time communication with doctor
-📋 Collect and analyze user responses
-📱 Responsive and user-friendly interface
-⚡ Fast backend using Flask
-💻 Interactive frontend using React
-🗄️ Database support using SQLite / PostgreSQL
-🔐 Secure communication between frontend and backend
-🛡️ Injury Classification
-🔴 Red — Critical
+---
 
-Indicates a potentially serious injury that may require urgent medical attention.
+## 🛡️ Injury Classification
 
-🟡 Yellow — Minor
+### Critical — Red
 
-Indicates a minor injury that may require monitoring or consultation with a healthcare professional.
+In Critical mode, the system identifies injury conditions that may require urgent medical attention based on the provided symptoms and OAR assessment.
 
-🟢 Green — Safe
+### Minor — Yellow
 
-Indicates a lower-risk condition where basic care and monitoring guidance can be followed.
+In Minor mode, the system identifies lower-severity injuries that may require monitoring, basic care, or consultation with a healthcare professional.
 
-🔄 System Workflow
-User
+### Safe — Green
+
+In Safe mode, the system identifies lower-risk conditions and provides basic care and monitoring guidance.
+
+---
+
+## 🔄 System Workflow
+
+```text
+User Prompt
      ↓
 CuraMind React Frontend
      ↓
-Chatbot / Injury Questionnaire
+Injury Chatbot / Questionnaire
      ↓
 User Responses
      ↓
@@ -66,123 +70,161 @@ Care Guidance
      ↓
 Doctor Communication
      ↓
+Final Response
+     ↓
 User
+```
 
-🏗️ System Architecture
+---
 
-CuraMind follows a modular web application architecture consisting of three major layers:
+# 🏗️ System Architecture
 
+CuraMind follows a modular healthcare web application architecture consisting of three major layers:
+
+``` text
 ┌──────────────────────────────┐
 │       Client Layer           │
-│       React Frontend         │
-│                              │
-│ Chatbot Interface            │
-│ Injury Questionnaire         │
-│ Injury Results               │
-│ Care Guidance                │
-│ Doctor Communication         │
+│      React Frontend          │
 └──────────────┬───────────────┘
                ↓
 ┌──────────────────────────────┐
 │     Application Layer        │
-│        Flask Backend         │
+│       Flask Backend          │
 │                              │
-│ Request Handling             │
 │ Injury Assessment            │
 │ OAR Rule Processing          │
-│ Classification Logic         │
+│ Classification Engine        │
 │ Care Guidance                │
+│ Chatbot Processing           │
 │ Doctor Communication         │
 └──────────────┬───────────────┘
                ↓
 ┌──────────────────────────────┐
 │         Data Layer           │
-│      SQLite / PostgreSQL     │
+│    SQLite / PostgreSQL       │
 │                              │
 │ User Data                    │
 │ Assessment Data              │
-│ Chat Data                    │
-└──────────────────────────────┘
+│ Conversation Data            │
+└──────────────┬───────────────┘
+               ↓
+        Doctor / User
+```
 
-🛠️ Tech Stack
-Frontend: React, JavaScript, CSS
-Backend: Python, Flask
-Database: SQLite / PostgreSQL
-Medical Assessment: Ottawa Ankle Rules (OAR)
-Development Server: Vite / Flask
-🚀 Installation & Setup
-1. Clone the Repository
-git clone https://github.com/yourusername/CuraMind.git
-cd CuraMind
+---
 
-2. Backend Setup
+# 🚀 Installation & Setup
+
+
+---
+
+## 1. Clone the Repository
+
+```bash
+git clone <https://github.com/Basantakhanal/CURAMIND.git>
+cd CURAMIND
+```
+
+---
+
+# 2. Backend Setup
 
 Navigate to the backend:
 
+```powershell
 cd backend
-
+```
 
 Create a Python virtual environment:
 
+```powershell
 python -m venv venv
-
+```
 
 Activate the virtual environment:
 
+```powershell
 .\venv\Scripts\Activate.ps1
+```
 
+Upgrade pip:
+
+```powershell
+python -m pip install --upgrade pip
+```
 
 Install all backend dependencies:
 
+```powershell
 pip install -r requirements.txt
+```
 
-3. Start the Backend
+---
 
-From the backend directory, run:
 
+# 4. Start the Backend
+
+From the `backend` directory, run:
+
+```powershell
 python app.py
+```
 
-4. Frontend Setup
 
-Open a new terminal while keeping the backend running.
+# 5. Frontend Setup
+
+Open a **new terminal** while keeping the backend running.
 
 Navigate to the frontend:
 
+```powershell
 cd frontend
-
+```
 
 Install frontend dependencies:
 
-npm i
-
+```powershell
+npm install
+```
 
 Start the development server:
 
+```powershell
 npm run dev
+```
 
-▶️ Running the Complete Project
+
+# ▶️ Running the Complete Project
 
 Both the backend and frontend must be running at the same time.
 
-Terminal 1 — Backend
-cd CuraMind\backend
+### Terminal 1 — Backend
+
+```powershell
+cd CURAMIND\backend
 .\venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python app.py
+pytjon app.py
+```
 
-Terminal 2 — Frontend
-cd CuraMind\frontend
-npm i
+### Terminal 2 — Frontend
+
+```powershell
+cd CURAMIND\frontend
+npm install
 npm run dev
+```
 
-📁 Project Structure
+# 📁 Project Structure
+
+```text
 CuraMind/
 │
 ├── backend/
 │   ├── app.py
+│   │
 │   ├── requirements.txt
-│   ├── venv/
-│   └── ...
+│   ├── .env
+│   └── venv/
 │
 ├── frontend/
 │   ├── src/
@@ -192,51 +234,11 @@ CuraMind/
 │
 ├── .gitignore
 └── README.md
+```
+## 🩺 CuraMind
+**Smart Foot Injury Assessment and Care Guidance System**
 
-💬 How CuraMind Works
-User opens the CuraMind web application.
-User interacts with the chatbot.
-User provides information about their foot injury.
-The information is sent to the Flask backend.
-The backend evaluates the responses using Ottawa Ankle Rules.
-CuraMind determines the injury severity.
-The injury is classified as Red, Yellow, or Green.
-Appropriate care guidance is displayed.
-If required, the user can communicate with a doctor.
-👨‍⚕️ Doctor Communication
+> Assess → Classify → Guide → Connect
 
-CuraMind provides a communication feature that allows users to connect with a doctor when professional medical guidance is required.
 
-Users can:
 
-Share injury-related information
-Discuss symptoms
-Receive professional guidance
-Seek further medical evaluation
-🎯 Purpose
-
-The main purpose of CuraMind is to provide users with a simple and accessible way to understand the potential severity of a foot injury using the Ottawa Ankle Rules.
-
-The application converts user responses into a clear classification and provides guidance about the next appropriate step.
-
-⚠️ Medical Disclaimer
-
-CuraMind is intended for preliminary assessment and informational purposes only.
-
-It does not replace professional medical diagnosis, physical examination, or treatment. If an injury appears severe, symptoms are worsening, or the user experiences an emergency, professional medical care should be sought immediately.
-
-🔮 Future Enhancements
-🤖 Advanced AI-powered symptom analysis
-🩻 Medical image analysis
-👨‍⚕️ Improved doctor consultation
-📱 Mobile application
-📊 Patient assessment history
-🔔 Medical reminders and notifications
-🌐 Multi-language support
-🔐 Enhanced authentication and privacy
-📈 Health analytics dashboard
-🩺 CuraMind
-
-Assess → Classify → Guide → Connect
-
-CuraMind aims to make preliminary foot injury assessment simple, accessible, and easy to understand while helping users identify when professional medical care may be required.
